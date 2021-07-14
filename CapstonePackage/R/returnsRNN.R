@@ -69,7 +69,7 @@ returnsRNN <- function(ticker, epochs, scriptsPath = "../Scripts", scalingFactor
     head(y)
 
     ######### MODEL #############
-    source(paste0(scriptsPath, "/src/keras-nn-regressor.R"))
+    source("R/kerasNNRegressor.R")
 
     model = KerasNNRegressor(
         x = x,

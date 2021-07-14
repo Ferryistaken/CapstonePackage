@@ -6,7 +6,7 @@ linearRegression <- function(stocks = c("GS")){
     library(xts)
     library(dygraphs)
 
-    source("../Scripts/src/get-correct-data.R")
+    source("R/getCorrectData.R")
 
     startYear <- "2010"
     startMonth <- "01"

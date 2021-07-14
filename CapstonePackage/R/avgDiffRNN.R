@@ -6,13 +6,13 @@ avgDiffRNN <- function(ticker, epochs, scriptsPath = "../Scripts") {
     #install_github("Ferryistaken/ezstocks")
     library(ezstocks)
     library(xts)
-    source(paste0(scriptsPath, "/src/keras-nn-regressor.R"))
+    source("R/KerasNNRegressor.R")
     minmax_normalize <- function(x, na.rm = TRUE) {
         return((x - min(x)) /(max(x)-min(x)))
     }
 
-    source(paste0(scriptsPath, "/src/MovingAvgDiff.R"))
-    source(paste0(scriptsPath, "/src/get-correct-data.R"))
+    source("R/MovingAvgDiff.R")
+    source("R/getCorrectData.R")
 
     cutoff <- 0.7
     stockData <- getStockData(c(ticker))
